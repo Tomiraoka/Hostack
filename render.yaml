@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: hostack-backend
+    runtime: docker
+    rootDir: backend
+    plan: free
+    region: frankfurt
+    healthCheckPath: /api/menu
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: MONGODB_URI
+        sync: false
+      - key: FRONTEND_URL
+        sync: false

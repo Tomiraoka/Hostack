@@ -1,0 +1,176 @@
+.navbar {
+  height: 80px;
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Georgia", serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--honey);
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--honey);
+  border-bottom: 2px solid var(--honey);
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 24px;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--honey-soft);
+  transition: background 0.2s;
+}
+
+.cart-icon:hover {
+  background: var(--honey);
+  color: #fff;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn,
+.register-btn,
+.profile-btn,
+.logout-btn {
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-btn {
+  background: var(--honey-soft);
+  color: var(--honey-dark);
+}
+
+.login-btn:hover {
+  background: var(--honey);
+  color: #fff;
+}
+
+.register-btn {
+  background: var(--honey);
+  color: #fff;
+}
+
+.register-btn:hover {
+  background: var(--honey-dark);
+}
+
+.profile-btn {
+  background: var(--honey-soft);
+  color: var(--honey-dark);
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-btn:hover {
+  background: var(--honey);
+  color: #fff;
+}
+
+.logout-btn {
+  background: #fdf0f0;
+  color: var(--danger);
+  padding: 10px 14px;
+  font-size: 18px;
+}
+
+.logout-btn:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .logo span {
+    font-size: 22px;
+  }
+}

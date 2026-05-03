@@ -1,0 +1,239 @@
+.home-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 50px 60px;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.home-label {
+  display: inline-block;
+  background: var(--honey-soft);
+  color: var(--honey-dark);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.home-hero-text h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--text);
+  font-family: "Georgia", serif;
+  margin-bottom: 24px;
+}
+
+.home-hero-text h1 span {
+  color: var(--honey);
+}
+
+.home-hero-text p {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.home-btn-primary,
+.home-btn-outline {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.home-btn-primary {
+  background: var(--honey);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(223, 168, 63, 0.4);
+}
+
+.home-btn-primary:hover {
+  background: var(--honey-dark);
+  transform: translateY(-2px);
+}
+
+.home-btn-outline {
+  border: 2px solid var(--honey);
+  color: var(--honey-dark);
+  background: #fff;
+}
+
+.home-btn-outline:hover {
+  background: var(--honey-soft);
+}
+
+.home-image-box {
+  position: relative;
+}
+
+.home-image-box img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.home-floating-card {
+  position: absolute;
+  bottom: 30px;
+  left: -30px;
+  background: #fff;
+  padding: 16px 22px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-floating-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--honey-soft);
+  color: var(--honey-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home-floating-card strong {
+  display: block;
+  font-size: 13px;
+  color: var(--honey-dark);
+  margin-bottom: 2px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.home-floating-card p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.home-floating-card span {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--honey);
+}
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.home-feature-card {
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.home-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.home-feature-card .icon-display {
+  margin: 0 auto 16px;
+  width: 64px;
+  height: 64px;
+}
+
+.home-feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.home-feature-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.home-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  padding: 50px;
+  box-shadow: var(--shadow-sm);
+}
+
+.home-about h2 {
+  font-size: 38px;
+  font-family: "Georgia", serif;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.home-about p {
+  font-size: 17px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.home-about img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+@media (max-width: 900px) {
+  .home-page {
+    padding: 30px 20px;
+  }
+  .home-hero,
+  .home-about,
+  .home-features {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .home-hero-text h1 {
+    font-size: 38px;
+  }
+  .home-image-box img {
+    height: 320px;
+  }
+  .home-about {
+    padding: 30px;
+  }
+  .home-floating-card {
+    left: 20px;
+    bottom: 20px;
+  }
+}

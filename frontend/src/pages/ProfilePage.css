@@ -1,0 +1,135 @@
+.profile-page-wrap {
+  min-height: calc(100vh - 80px);
+  padding: 50px 60px;
+  background: linear-gradient(135deg, var(--honey-soft) 0%, #fff8ef 100%);
+}
+
+.profile-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.profile-section {
+  background: #fff;
+  padding: 36px 32px;
+  border-radius: 22px;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-section h1 {
+  font-family: "Georgia", serif;
+  font-size: 30px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.profile-section h2 {
+  font-family: "Georgia", serif;
+  font-size: 26px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.profile-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 26px;
+  font-size: 15px;
+}
+
+.cards-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+.cards-section-header h2,
+.cards-section-header .profile-subtitle {
+  margin-bottom: 4px;
+}
+
+.add-card-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+  justify-items: center;
+}
+
+.cards-empty {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--honey-soft);
+  border-radius: 16px;
+  border: 2px dashed var(--honey);
+}
+
+.cards-empty-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 14px;
+  border-radius: 16px;
+  background: var(--honey-soft);
+  color: var(--honey-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-empty h3 {
+  font-size: 19px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.cards-empty p {
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.cards-empty small {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+  max-width: 380px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .profile-page-wrap {
+    padding: 30px 16px;
+  }
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+  .profile-section {
+    padding: 24px 20px;
+  }
+  .cards-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-h2 {
+  font-size: 18px;
+  margin: 28px 0 14px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.profile-h2.no-margin {
+  margin: 0;
+}

@@ -1,0 +1,227 @@
+.add-card-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 15, 5, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 20px;
+  animation: addCardFade 0.2s ease-out;
+}
+
+@keyframes addCardFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.add-card-modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  width: 100%;
+  max-width: 460px;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: addCardSlide 0.25s ease-out;
+}
+
+@keyframes addCardSlide {
+  from { opacity: 0; transform: translateY(10px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.add-card-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f5f3ee;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-card-close:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.add-card-modal h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.add-card-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.add-card-preview {
+  background: linear-gradient(135deg, #2a2a2a, #4a4a4a);
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 22px;
+  position: relative;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.add-card-preview.brand-visa {
+  background: linear-gradient(135deg, #1a3a8a, #2549b8);
+}
+
+.add-card-preview.brand-mastercard {
+  background: linear-gradient(135deg, #2a2a2a, #6b3a0a);
+}
+
+.add-card-preview.brand-amex {
+  background: linear-gradient(135deg, #006fcf, #00377a);
+}
+
+.preview-brand {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  align-self: flex-end;
+  font-style: italic;
+}
+
+.preview-chip {
+  width: 38px;
+  height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #d8b450, #b8862a);
+  margin-top: 4px;
+}
+
+.preview-number {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+}
+
+.preview-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.preview-row small {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  opacity: 0.6;
+  margin-bottom: 2px;
+}
+
+.preview-row strong {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.add-card-modal label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.add-card-modal label input {
+  display: block;
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 6px;
+  background: #fafaf7;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  font-variant-numeric: tabular-nums;
+}
+
+.add-card-modal label input:focus {
+  border-color: var(--honey);
+  background: #fff;
+}
+
+.add-card-modal label input.input-error {
+  border-color: var(--danger);
+}
+
+.add-card-modal label small {
+  display: block;
+  color: var(--danger);
+  font-size: 12px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+
+.add-card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.add-card-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 8px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.add-card-actions .primary-btn,
+.add-card-actions .secondary-btn {
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.add-card-actions .primary-btn {
+  background: var(--honey);
+  color: #fff;
+}
+
+.add-card-actions .primary-btn:hover:not(:disabled) {
+  background: var(--honey-dark);
+}
+
+.add-card-actions .primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.add-card-actions .secondary-btn {
+  background: #f1efea;
+  color: var(--text);
+}
+
+.add-card-actions .secondary-btn:hover:not(:disabled) {
+  background: #e5e1d8;
+}

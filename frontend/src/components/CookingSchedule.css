@@ -1,0 +1,116 @@
+.cooking-schedule {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: #fafaf7;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.cooking-schedule-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cooking-schedule-title small {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.cooking-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cooking-line {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.cooking-line.phase-waiting {
+  background: #fafaf7;
+  border-color: var(--border);
+  opacity: 0.85;
+}
+
+.cooking-line.phase-cooking {
+  background: linear-gradient(to right, #fff8ef, #fff);
+  border-color: var(--honey);
+}
+
+.cooking-line.phase-done {
+  background: #f3faf5;
+  border-color: var(--success);
+}
+
+.cooking-line-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.cooking-line-head strong {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.cooking-line-head .qty {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.cooking-line-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.cooking-line.phase-cooking .cooking-line-time {
+  color: var(--honey-dark);
+  font-weight: 600;
+}
+
+.cooking-line.phase-done .cooking-line-time {
+  color: #1f7a3a;
+  font-weight: 600;
+}
+
+.cooking-progress {
+  height: 4px;
+  background: #f0e9d8;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cooking-progress-fill {
+  height: 100%;
+  background: var(--honey);
+  border-radius: 2px;
+  transition: width 1s linear;
+}
+
+.cooking-line.phase-done .cooking-progress-fill {
+  background: var(--success);
+}
+
+.cooking-schedule-hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 6px 4px 0;
+  border-top: 1px dashed var(--border);
+}
